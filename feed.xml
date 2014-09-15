@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+  <article>
+    <date></date>
+    <title>Test1</title>
+    <picture></picture>
+    <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quia aspernatur optio recusandae, atque, reiciendis tempore doloremque temporibus aliquid nemo vitae sint? Aliquid ab, eaque blanditiis hic sint odit! Voluptas, quibusdam necessitatibus repudiandae totam! Cum tempora doloremque animi illo dolore, ad, quod assumenda reiciendis, libero placeat ducimus laudantium illum deleniti totam inventore est odit, debitis itaque iste deserunt expedita. Quas autem nam, maxime ducimus iusto facilis non! Error molestias atque magnam tempore sapiente molestiae explicabo velit tenetur quaerat. Placeat odio accusamus illo tempora provident repellat itaque sequi nulla facere veritatis cumque nam, magnam quaerat animi ipsa et sapiente obcaecati laborum.</content>
+  </article>
+  <article>
+    <date></date>
+    <title>Pepe</title>
+    <picture>img/download.jpg</picture>
+    <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quia aspernatur optio recusandae, atque, reiciendis tempore doloremque temporibus aliquid nemo vitae sint? Aliquid ab, eaque blanditiis hic sint odit! Voluptas, quibusdam necessitatibus repudiandae totam! Cum tempora doloremque animi illo dolore, ad, quod assumenda reiciendis, libero placeat ducimus laudantium illum deleniti totam inventore est odit, debitis itaque iste deserunt expedita. Quas autem nam, maxime ducimus iusto facilis non! Error molestias atque magnam tempore sapiente molestiae explicabo velit tenetur quaerat. Placeat odio accusamus illo tempora provident repellat itaque sequi nulla facere veritatis cumque nam, magnam quaerat animi ipsa et sapiente obcaecati laborum.</content>
+  </article>
+  <article>
+    <date></date>
+    <title>Test3</title>
+    <picture></picture>
+    <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quia aspernatur optio recusandae, atque, reiciendis tempore doloremque temporibus aliquid nemo vitae sint? Aliquid ab, eaque blanditiis hic sint odit! Voluptas, quibusdam necessitatibus repudiandae totam! Cum tempora doloremque animi illo dolore, ad, quod assumenda reiciendis, libero placeat ducimus laudantium illum deleniti totam inventore est odit, debitis itaque iste deserunt expedita. Quas autem nam, maxime ducimus iusto facilis non! Error molestias atque magnam tempore sapiente molestiae explicabo velit tenetur quaerat. Placeat odio accusamus illo tempora provident repellat itaque sequi nulla facere veritatis cumque nam, magnam quaerat animi ipsa et sapiente obcaecati laborum.</content>
+  </article>
+  <article>
+    <date></date>
+    <title>Test4</title>
+    <picture></picture>
+    <content>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit quia aspernatur optio recusandae, atque, reiciendis tempore doloremque temporibus aliquid nemo vitae sint? Aliquid ab, eaque blanditiis hic sint odit! Voluptas, quibusdam necessitatibus repudiandae totam! Cum tempora doloremque animi illo dolore, ad, quod assumenda reiciendis, libero placeat ducimus laudantium illum deleniti totam inventore est odit, debitis itaque iste deserunt expedita. Quas autem nam, maxime ducimus iusto facilis non! Error molestias atque magnam tempore sapiente molestiae explicabo velit tenetur quaerat. Placeat odio accusamus illo tempora provident repellat itaque sequi nulla facere veritatis cumque nam, magnam quaerat animi ipsa et sapiente obcaecati laborum.</content>
+  </article>
+</feed>
