@@ -1,29 +1,36 @@
 var feedreader = {
-  filename: "feed.xml",
-  xmlDoc: this.loadXMLDoc,
-  structure: this.parseData,
+
+  filename: null,
+  structure: null,
+  xmlDoc: null,
+
+  init: function(url, id) {
+    this.filename = url;
+    this.xmlDoc = this.loadXMLDoc();
+    this.structure = this.parseData();
+    this.writeHTML(id);
+  },
 
   parseData: function() {
-    console.log('parseData');
     var articles = this.xmlDoc.getElementsByTagName("article");
-    var html = '<div>';
+    var html = '';
     for (var i = 0; i < articles.length; i++) {
+      html += '<div class="article">';
       var title = articles[i].getElementsByTagName("title")[0].childNodes[0];
       if(title){
         html += '<p class="title">' + title.nodeValue + '</p>';
       }
-      html += imgTag(articles[i].getElementsByTagName("picture")[0].childNodes[0]);
+      html += this.imgTag(articles[i].getElementsByTagName("picture")[0].childNodes[0]);
       var content = articles[i].getElementsByTagName("content")[0].childNodes[0];
       if(content){
         html += '<p class="content">' + content.nodeValue + '</p>';
       }
+      html += '</div>';
     };
-    html += '</div>';
     return html;
   },
 
   writeHTML: function(id){
-    console.log('writeHTML');
     document.getElementById(id).innerHTML = this.structure;
   },
 

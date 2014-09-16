@@ -7,10 +7,10 @@
   <script type="text/javascript" src="feedreader.js"></script>
 </head>
 <body>
-  <div id="feedContainer"></div>
+  <div id="feed"></div>
   <script>
     var feed = feedreader;
-    feed.writeHTML('feedContainer')
+    feed.init('feed.xml', 'feed');
   </script>
 </body>
 </html>
