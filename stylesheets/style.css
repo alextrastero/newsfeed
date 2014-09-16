@@ -1,0 +1,37 @@
+body {
+  background-color: #4AB3D5;
+}
+.container {
+  overflow: hidden;
+  height: 200px;
+  width: 800px;
+  margin: 20px auto;
+}
+.feedreader {
+  position: relative;
+  top: 0;
+}
+.article {
+  background-color: #F7F7F7;
+  height: 110px;
+  padding: 10px;
+  overflow: hidden;
+}
+.article__title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.article__content {
+  font-size: 14px;
+  line-height: 18px;
+  display: none;
+}
+.article__content--short {
+  font-size: 14px;
+  line-height: 18px;
+}
+.article__picture {
+  float: left;
+  margin: 0 10px 10px 0;
+}
