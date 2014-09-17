@@ -11,12 +11,15 @@
 </head>
 <body>
   <!-- <div ng-app="" ng-init="title='Test1'"> -->
-  <div ng-app="" class="app" ng-controller="init" ng-init="owner='Pepe'">
+  <!-- <div ng-app="" class="app" ng-controller="init" ng-init="owner='Pepe'"> -->
+  <!-- <div ng-app="" class="app" ng-controller="init" ng-init="article={title:'Title',content:'Content',picture:'Picture(optional in article)'}"> -->
+  <div ng-app="" class="app" ng-init="numbers=[3,14,5,6,83,4]" ng-controller="getTheJson">
     <p>Welcome {{ owner }}</p>
     <p>Expression:</p><p>5 + 5 = {{ 5 + 5 }}</p>
-
-
+    <span ng-repeat="num in numbers">{{num}}</span>
     <div>
+
+      <!-- <p><input type="text" ng-model="date" disabled></p>
 
       <p><input placeholder="Title" type="text" ng-model="title"></p>
       <p ng-bind="title"></p>
@@ -24,23 +27,70 @@
       <p><textarea placeholder="Content" name="" ng-model="content" id="" cols="30" rows="10"></textarea>
       <p ng-bind="content"></p>
       
-      <p><input placeholder="Picture (optional)" type="text" ng-model="picture"></p>
-      <p ng-bind="picture"></p>
+      <p><input placeholder="Picture (optional)" type="text" ng-model="picture"></p> -->
+      <!-- you can use ng-bind or {{}} -->
+      <!-- <p>{{article.picture}}</p> -->
+
+
+    <!-- <ul>
+      <li ng-repeat="x in names | orderBy: 'money'">
+        {{ (x.name | uppercase) + ' = ' + (x.money | currency) }}
+      </li>
+    </ul> -->
+    <!-- <hr>
+    <p>Type your country</p>
+    <input type="text" ng-model="find">
+    <ul>
+      <li ng-repeat="c in countries | filter:find">
+        {{ c | uppercase }}
+      </li>
+    </ul> -->
 
     </div>
 
 
 
+    <p ng-show="true">I am visible.</p>
+    <p ng-show="false">I am not visible.</p>
+    
+    <p>{{ addItUp(987,024) }}</p>
+    <ul>
+      <li ng-repeat="x in names | orderBy: 'Country'">
+        {{ (x.Name | uppercase) + ', ' + x.Country}}
+      </li>
+    </ul>
+    <hr>
+    <button ng-click="count = count + 1">Count</button>
+    <p>{{count}}</p>
+    <hr>
+    <button ng-click="toggle()">Toggle Image</button>
+    <br>
+    <img src="http://cdn.pitchfork.com/albums/20908/homepage_large.701e3a06.jpg" ng-hide='image'>
 
 
   </div>
   <script>
+  function getTheJson($scope, $http){
+    $scope.toggle = function(){
+      $scope.image = !$scope.image;
+    };
+    $http.get('feed.json').success(function(response){
+      $scope.names = response;
+    })
+  }
+  </script>
+  <script src="namesController.js"></script>
+  <!-- <script>
     function init($scope) {
-      console.log($scope);
+      var date = new Date();
+      $scope.date = date.getFullYear() + '' + ( date.getMonth() + 1 ) + '' + date.getDate();
       $scope.title = "John";
       $scope.content = "Doe";
+      $scope.addItUp = function(x, y){
+        return x+y;
+      };
     }
-  </script>
+  </script> -->
   <!-- <div class="container" id="feed"></div> -->
   <!-- <div class="popup"></div> -->
   <!-- <script>
