@@ -1,5 +1,5 @@
 body {
-  background-color: #4AB3D5;
+  background-color: #f9f9f9;
 }
 .container {
   overflow: hidden;
@@ -34,4 +34,12 @@ body {
 .article__picture {
   float: left;
   margin: 0 10px 10px 0;
+}
+
+
+
+/*angular*/
+.app{
+  width: 800px;
+  margin: 20px auto;
 }

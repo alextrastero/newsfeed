@@ -3,19 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-  <link rel="stylesheet" href="stylesheets/reset.css">
+  <!-- <link rel="stylesheet" href="stylesheets/reset.css"> -->
   <link rel="stylesheet" href="stylesheets/style.css">
-  <script type="text/javascript" src="feedreader.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!-- <script type="text/javascript" src="feedreader.js"></script> -->
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </head>
 <body>
-  <div class="container" id="feed"></div>
-  <div class="popup"></div>
+  <!-- <div ng-app="" ng-init="title='Test1'"> -->
+  <div ng-app="" class="app" ng-controller="init" ng-init="owner='Pepe'">
+    <p>Welcome {{ owner }}</p>
+    <p>Expression:</p><p>5 + 5 = {{ 5 + 5 }}</p>
+
+
+    <div>
+
+      <p><input placeholder="Title" type="text" ng-model="title"></p>
+      <p ng-bind="title"></p>
+      
+      <p><textarea placeholder="Content" name="" ng-model="content" id="" cols="30" rows="10"></textarea>
+      <p ng-bind="content"></p>
+      
+      <p><input placeholder="Picture (optional)" type="text" ng-model="picture"></p>
+      <p ng-bind="picture"></p>
+
+    </div>
+
+
+
+
+
+  </div>
   <script>
+    function init($scope) {
+      console.log($scope);
+      $scope.title = "John";
+      $scope.content = "Doe";
+    }
+  </script>
+  <!-- <div class="container" id="feed"></div> -->
+  <!-- <div class="popup"></div> -->
+  <!-- <script>
     $(document).ready(function() {
       var feed = feedreader;
       feed.init('feed.xml', 'feed');
     });
-  </script>
+  </script> -->
 </body>
 </html>
