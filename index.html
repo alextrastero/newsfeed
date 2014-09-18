@@ -14,9 +14,9 @@
   <!-- <div ng-app="" class="app" ng-controller="init" ng-init="owner='Pepe'"> -->
   <!-- <div ng-app="" class="app" ng-controller="init" ng-init="article={title:'Title',content:'Content',picture:'Picture(optional in article)'}"> -->
   <div ng-app="" class="app" ng-init="numbers=[3,14,5,6,83,4]" ng-controller="getTheJson">
-    <p>Welcome {{ owner }}</p>
-    <p>Expression:</p><p>5 + 5 = {{ 5 + 5 }}</p>
-    <span ng-repeat="num in numbers">{{num}}</span>
+    <!-- <p>Welcome {{ owner }}</p> -->
+    <!-- <p>Expression:</p><p>5 + 5 = {{ 5 + 5 }}</p> -->
+    <!-- <span ng-repeat="num in numbers">{{num}}</span> -->
     <div>
 
       <!-- <p><input type="text" ng-model="date" disabled></p>
@@ -49,37 +49,32 @@
     </div>
 
 
-
+<!-- 
     <p ng-show="true">I am visible.</p>
     <p ng-show="false">I am not visible.</p>
     
-    <p>{{ addItUp(987,024) }}</p>
-    <ul>
-      <li ng-repeat="x in names | orderBy: 'Country'">
-        {{ (x.Name | uppercase) + ', ' + x.Country}}
-      </li>
-    </ul>
-    <hr>
+    <p>{{ addItUp(987,024) }}</p> -->
+    
+    <div ng-repeat="x in articles | orderBy: 'Date'">
+      <p>
+        {{x.Title}}
+        <small>{{x.Date}}</small>
+      </p>
+      <p>{{x.Content}}</p>
+      <!-- {{ (x.Title | uppercase) + ', ' + x.Content}} -->
+    </div>
+    
+    <!-- <hr>
     <button ng-click="count = count + 1">Count</button>
     <p>{{count}}</p>
     <hr>
     <button ng-click="toggle()">Toggle Image</button>
     <br>
-    <img src="http://cdn.pitchfork.com/albums/20908/homepage_large.701e3a06.jpg" ng-hide='image'>
+    <img src="http://cdn.pitchfork.com/albums/20908/homepage_large.701e3a06.jpg" ng-hide='image'> -->
 
 
   </div>
-  <script>
-  function getTheJson($scope, $http){
-    $scope.toggle = function(){
-      $scope.image = !$scope.image;
-    };
-    $http.get('feed.json').success(function(response){
-      $scope.names = response;
-    })
-  }
-  </script>
-  <script src="namesController.js"></script>
+  <script src="jsonReader.js"></script>
   <!-- <script>
     function init($scope) {
       var date = new Date();

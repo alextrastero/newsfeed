@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="" class="app" ng-init="numbers=[3,14,5,6,83,4]" ng-controller="addToJson">
+    <div>
+
+    </div>
+    
+    <div ng-repeat="x in articles | orderBy: 'Date'">
+      <p>
+        {{x.Title}}
+        <small>{{x.Date}}</small>
+      </p>
+      <p>{{x.Content}}</p>
+    </div>
+    
+  </div>
+  <script src="addToJson.js"></script>
+</body>
+</html>
