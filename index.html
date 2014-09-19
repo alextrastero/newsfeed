@@ -13,11 +13,26 @@
   <!-- <div ng-app="" ng-init="title='Test1'"> -->
   <!-- <div ng-app="" class="app" ng-controller="init" ng-init="owner='Pepe'"> -->
   <!-- <div ng-app="" class="app" ng-controller="init" ng-init="article={title:'Title',content:'Content',picture:'Picture(optional in article)'}"> -->
-  <div ng-app="" class="app" ng-init="numbers=[3,14,5,6,83,4]" ng-controller="getTheJson">
+  <div ng-app="" class="app" ng-controller="feeder">
     <!-- <p>Welcome {{ owner }}</p> -->
     <!-- <p>Expression:</p><p>5 + 5 = {{ 5 + 5 }}</p> -->
     <!-- <span ng-repeat="num in numbers">{{num}}</span> -->
-    <div>
+    <div ng-repeat="x in articles">
+      <hr>
+      <p>
+        <span>Title: </span>
+        <input type="text" value="{{x.Title}}">
+      </p>
+      <p>
+        <span>Date: </span>
+        <input placeholder="Date" type="text" ng-model="date">
+      </p>
+      <p>
+        <span>Content: </span>
+        <textarea placeholder="Content" cols="30" rows="10" ng-model="content"></textarea>
+      </p>
+      <div>
+    </div>
 
       <!-- <p><input type="text" ng-model="date" disabled></p>
 
@@ -46,6 +61,13 @@
       </li>
     </ul> -->
 
+        <!-- <p>&nbsp;</p>
+        <div ng-repeat="x in articles | orderBy: 'Date'">
+          <h2>{{x.Title}}</h2>
+          <small>{{x.Date}}</small>
+          <p>{{x.Content}}</p>
+        </div> -->
+
     </div>
 
 
@@ -55,14 +77,6 @@
     
     <p>{{ addItUp(987,024) }}</p> -->
     
-    <div ng-repeat="x in articles | orderBy: 'Date'">
-      <p>
-        {{x.Title}}
-        <small>{{x.Date}}</small>
-      </p>
-      <p>{{x.Content}}</p>
-      <!-- {{ (x.Title | uppercase) + ', ' + x.Content}} -->
-    </div>
     
     <!-- <hr>
     <button ng-click="count = count + 1">Count</button>
@@ -74,7 +88,7 @@
 
 
   </div>
-  <script src="jsonReader.js"></script>
+  <script src="addToJson.js"></script>
   <!-- <script>
     function init($scope) {
       var date = new Date();
